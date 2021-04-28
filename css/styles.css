@@ -1,0 +1,39 @@
+body {
+  padding-top: 56px;
+  background-color: #dccdae;
+}
+
+.fCO{
+	background-color: #816854;
+}
+.fC{
+	background-color: #b39c7c;
+}
+.fCC{
+	background-color: #dccdae;
+}
+.fB{
+	background-color: #f5f5f5;
+}
+
+.lN{
+	color: #000000;
+}
+.lCO{
+	color: #816854;
+}
+.lC{
+	color: #b39c7c;
+}
+.lCC{
+	color: #dccdae;
+}
+.lB{
+	color: #f5f5f5;
+}
+.nav-item:hover{
+	color: #816854;
+}
+.navbar-brand:hover{
+	color: #b39c7c;
+}
