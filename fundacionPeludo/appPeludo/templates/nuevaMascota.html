@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block nombresvar %}
+  <a class="nav-item nav-link border lB fC" href="/">Inicio</a>
+  <a class="nav-item nav-link border lB fC" href="/perros">Perros</a>
+  <a class="nav-item nav-link border lB fC" href="/gatos">Gatos</a>
+  <a class="nav-item nav-link border lB fC" href="/acercade">Acerca de nosotros</a>
+  <a class="nav-item nav-link border lCO fC" href="/listarMascotas"><b>Lista de mascotas</b></a>
+{% endblock nombresvar %}
+
+{% block contenido %}
+  <!-- Contenido pagina -->
+  <div class="container">
+    <!-- Barra informacion -->
+    <div class="card text-white fCO my-5 py-4 text-center">
+      <div class="card-body">
+        <h1>Agregar nueva mascota</h1>
+
+        <form action="{% url 'guardarMascota' %}" method="POST">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for = "codigo">Codigo</label><br/>
+            <input type = "text" class="form-control" name = "codigo" /><br/>
+          </div>
+
+          <div class="form-group">
+            <label for = "nombre">Nombre mascota</label><br/>
+            <input type = "text" class="form-control" name = "nombre" /><br/>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Guardar mascota</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+{% endblock contenido %}
